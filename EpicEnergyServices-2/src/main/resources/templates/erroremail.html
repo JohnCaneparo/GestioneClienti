@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<meta charset="ISO-8859-1">
+<title>Errore email già in uso</title>
+<style>
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.my-container {
+	align-items: center;
+    justify-content: center;
+    display:flex;
+    width:100% !important;
+    height:100% !important;
+    margin-top:5%;
+}
+
+body {
+  --accet-color: #00223E;
+  --text-color: black;
+  --background-color: #FFA17F;
+  
+  --button-text-color: var(var(--background-color));
+  --transition-delay: 1s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: var(--transition-delay);
+}
+
+body.dark {
+  --accet-color: #FFA17F;
+  --text-color: white;
+  --background-color: #00223E;
+  --button-text-color: #00223E;
+}
+
+.theme-toggle-button {
+  background-color: var(--accet-color);
+  color: #fbfdff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  border: none;
+  outline: none;
+  transition: var(--transition-delay);
+  position:absolute;
+  top:5%;
+  right:10%;
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus {
+  	transform: scale(1.1);
+}
+
+</style>
+
+</head>
+<body>
+
+		<h1 style="margin-top:5%;">ERRORE: email già in uso!</h1>
+
+    	<button class="theme-toggle-button">
+    	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+  		<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+  		<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+		</svg>
+    	</button>
+
+			
+	<script type="text/javascript">
+	
+		const sunMoonContainer = document.querySelector('.sun-moon-container')
+		document.querySelector('.theme-toggle-button').addEventListener('click',() =>{
+		    
+		    document.body.classList.toggle('dark')
+	
+		    const currentRotation = parseInt(getComputedStyle(sunMoonContainer).getPropertyValue('--rotation'))
+	
+		})
+	
+	</script>
+			
+</body>
+</html>
