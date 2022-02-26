@@ -1,5 +1,5 @@
 # GestioneClienti (Progetto Finale Epicode)  
-******************************************************************* LEGGIMI *******************************************************************  
+***************************************************************** LEGGIMI *******************************************************************  
 Progetto che replica un gestionale CRM.  
 Il backend è basato su Spring Boot Data JPA REST, scritto con Java11, che consente di gestire lato server e lato client un database basato su PostgreSQL contenente Regioni, Province e Comuni, fornite tramite appositi file .csv, Indirizzi, Clienti e Fatture. Tramite questo web service è possibile effettuare ricerche basate su diversi criteri, salvare, modificare ed eliminare le principali entità. È stato integrato un sistema di criptazione dei dati sensibili e di verifica dei ruoli dell'utente che accede, in modo da consentire ad admins e users di accedere a differenti funzionalità.  
 Il frontend è composto da un piccolo portale basato su Thymeleaf e Bootstrap5 per fornire una migliore esperienza utente.  
